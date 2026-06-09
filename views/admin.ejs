@@ -1,0 +1,14 @@
+﻿<%- include('partials/header') %>
+
+<h1>پنل مدیریت - پیام‌های دریافتی</h1>
+<a href="/admin/logout">خروج</a>
+
+<% if (messages.length === 0) { %>
+    <p>هیچ پیامی وجود ندارد</p>
+<% } else { %>
+    <% messages.forEach(msg => { %>
+        <p><strong><%= msg.name %></strong> (<%= msg.email %>): <%= msg.message %></p>
+    <% }) %>
+<% } %>
+
+<%- include('partials/footer') %>

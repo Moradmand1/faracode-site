@@ -1,0 +1,24 @@
+﻿<%- include('partials/header') %>
+
+<div style="max-width: 400px; margin: 50px auto;" class="card">
+    <h2 style="text-align: center;">ورود به پنل شخصی</h2>
+    
+    <form action="/admin/login" method="POST">
+        <div class="form-group">
+            <label>نام کاربری</label>
+            <input type="text" name="username" required>
+        </div>
+        <div class="form-group">
+            <label>رمز عبور</label>
+            <input type="password" name="password" required>
+        </div>
+        <button type="submit" class="btn" style="width: 100%;">ورود</button>
+    </form>
+    
+    <p style="text-align: center; margin-top: 20px; font-size: 14px; color: #999;">
+        نام کاربری: admin<br>
+        رمز پیش فرض: abc123
+    </p>
+</div>
+
+<%- include('partials/footer') %>

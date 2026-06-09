@@ -1,0 +1,119 @@
+﻿<%- include('partials/header') %>
+
+<h1 style="text-align: center;">نمونه کارهای ما</h1>
+<p style="text-align: center; margin-bottom: 40px;">برخی از پروژه‌های موفق تیم فراکد</p>
+
+<div class="grid-3" id="portfolio-grid">
+    <!-- پروژه 1: ابزارمارکت -->
+    <div class="portfolio-card">
+        <a href="https://abzarmarket.com" target="_blank" rel="noopener noreferrer">
+            <div class="portfolio-image">
+                <img src="/images/portfolio/abzarmarket.jpg" alt="ابزارمارکت" onerror="this.src='/images/placeholder.jpg'">
+            </div>
+            <div class="portfolio-info">
+                <h3>ابزارمارکت</h3>
+                <p>فروشگاه آنلاین ابزارآلات صنعتی و تخصصی</p>
+                <span class="portfolio-link"> → مشاهده سایت</span>
+            </div>
+        </a>
+    </div>
+    
+    <!-- پروژه 2: تکنوسان -->
+    <div class="portfolio-card">
+        <a href="https://technosun.ir" target="_blank" rel="noopener noreferrer">
+            <div class="portfolio-image">
+                <img src="/images/portfolio/technosun.jpg" alt="تکنوسان" onerror="this.src='/images/placeholder.jpg'">
+            </div>
+            <div class="portfolio-info">
+                <h3>تکنوسان</h3>
+                <p>بزرگترین وبسایت خرید عمده لوازم جانبی موبایل</p>
+                <span class="portfolio-link"> → مشاهده سایت</span>
+            </div>
+        </a>
+    </div>
+    
+    <!-- پروژه 3: جانبی -->
+    <div class="portfolio-card">
+        <a href="https://janebi.com" target="_blank" rel="noopener noreferrer">
+            <div class="portfolio-image">
+                <img src="/images/portfolio/janebi.jpg" alt="جانبی" onerror="this.src='/images/placeholder.jpg'">
+            </div>
+            <div class="portfolio-info">
+                <h3>جانبی</h3>
+                <p>فروش انواع گجت‌های هوشمند و لوازم جانبی</p>
+                <span class="portfolio-link"> → مشاهده سایت</span>
+            </div>
+        </a>
+    </div>
+</div>
+
+<style>
+    .portfolio-card {
+        background: #fff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .portfolio-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+    
+    .portfolio-card a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+    
+    .portfolio-image {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        background: #f0f2f5;
+    }
+    
+    .portfolio-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    .portfolio-card:hover .portfolio-image img {
+        transform: scale(1.05);
+    }
+    
+    .portfolio-info {
+        padding: 20px;
+    }
+    
+    .portfolio-info h3 {
+        margin: 0 0 10px 0;
+        font-size: 20px;
+        color: #1a1a2e;
+    }
+    
+    .portfolio-info p {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 12px;
+        line-height: 1.6;
+    }
+    
+    .portfolio-link {
+        color: #0066cc;
+        font-size: 14px;
+        font-weight: bold;
+        transition: color 0.3s;
+        display: inline-block;
+    }
+    
+    .portfolio-card:hover .portfolio-link {
+        color: #00a3cc;
+        transform: translateX(5px);
+    }
+</style>
+
+<%- include('partials/footer') %>

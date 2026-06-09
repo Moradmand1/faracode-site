@@ -1,0 +1,256 @@
+﻿<%- include('partials/header') %>
+
+<!-- بنر اصلی -->
+<div class="hero-section" style="display: flex; align-items: center; justify-content: space-between; padding: 60px 0 80px 0; gap: 50px; flex-wrap: wrap;">
+    <div class="hero-image" style="flex: 1; text-align: center;">
+        <img src="https://visionbranding.ir/wp-content/uploads/2023/02/sitettttt.png" alt="طراحی سایت" style="width: 100%; max-width: 750px;">
+    </div>
+    <div class="hero-text" style="flex: 1;">
+        <h1 style="color: #000000;">طراحی سایت حرفه‌ای</h1>
+        <p style="font-size: 20px; margin-bottom: 30px; color: #4a4a6a;">با تخصص و تجربه، ایده شما را به واقعیت تبدیل می‌کنیم</p>
+        <a href="/contact" class="btn">شروع همکاری</a>
+        <a href="/portfolio" class="btn btn-outline" style="margin-right: 15px;">نمونه کارها</a>
+    </div>
+</div>
+
+<style>
+    /* افکت برای عکس (سمت چپ) */
+    .hero-image {
+        opacity: 0;
+        transform: scale(0.9);
+        animation: fadeInScale 0.8s ease forwards;
+    }
+    
+    /* افکت برای متن (سمت راست) */
+    .hero-text {
+        opacity: 0;
+        transform: translateX(30px);
+        animation: fadeInRight 0.8s ease forwards 0.2s;
+    }
+    
+    @keyframes fadeInScale {
+        from {
+            opacity: 0;
+            transform: scale(0.85);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    
+    @keyframes fadeInRight {
+        from {
+            opacity: 0;
+            transform: translateX(40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+</style>
+
+<!-- متن معرفی در قالب کارت -->
+<div class="section animate-on-scroll" id="services-section">
+<div class="section" style="padding: 20px 0 40px 0;">
+    <div class="intro-card" style="background: linear-gradient(135deg, #ffffff, #f8f9fa); border-radius: 30px; padding: 40px 35px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid rgba(0,102,204,0.1); max-width: 900px; margin: 0 auto;">
+        
+        <!-- تایتل با لوگو کنارش -->
+        <div style="display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 25px;">
+            <img src="/images/Logos/1.png" alt="فراکد" style="height: 40px; width: auto;">
+            <h3 style="color: #0066cc; font-size: 24px; font-weight: 600; margin: 0;">معرفی فراکد</h3>
+        </div>
+        
+        <p style="font-size: 18px; color: #4a4a6a; line-height: 1.9; margin-bottom: 0;">
+            فراکد با بیش از یک دهه تجربه درخشان، تیمی متشکل از متخصصان خلاق و حرفه‌ای 
+            در زمینه طراحی سایت، اپلیکیشن موبایل و بهینه‌سازی دیجیتال است. 
+            ما با تکیه بر دانش فنی روز و تعهد به کیفیت، کنار شما هستیم تا ایده‌هایتان را به واقعیت تبدیل کنید.
+        </p>
+        
+        <div style="width: 80px; height: 3px; background: linear-gradient(90deg, #0066cc, #00a3cc); margin: 25px auto 0; border-radius: 2px;"></div>
+    </div>
+</div>
+
+<!-- بخش خدمات -->
+<div class="section animate-on-scroll" id="services-section">
+    <h2>خدمات ما</h2>
+    <div class="grid-3">
+        <div class="card">
+            <h3>طراحی سایت</h3>
+            <p>سایت‌های شرکتی، فروشگاهی، شخصی با آخرین تکنولوژی‌های روز</p>
+        </div>
+        <div class="card">
+            <h3>اپلیکیشن موبایل</h3>
+            <p>توسعه اپلیکیشن‌های اندروید و iOS با کیفیت بالا</p>
+        </div>
+        <div class="card">
+            <h3>سئو و بهینه‌سازی</h3>
+            <p>بهبود رتبه سایت شما در گوگل و جذب بازدیدکننده بیشتر</p>
+        </div>
+    </div>
+</div>
+
+<!-- آمار با دایره‌های پیشرفت -->
+<div class="section" id="stats-section" style="position: relative; overflow: hidden; padding: 80px 0; margin: 40px 0;">
+    <div class="stats-bg"></div>
+    <div class="stats-dots"></div>
+    <div class="stats-wave wave-top"></div>
+    <div class="stats-wave wave-bottom"></div>
+    
+    <div style="position: relative; z-index: 10;">
+        <div class="grid-3" style="gap: 50px;">
+            <div class="stat-item">
+                <div class="circle-container">
+                    <canvas id="circle1" width="180" height="180" class="progress-circle"></canvas>
+                    <div class="stat-number" data-target="67">0</div>
+                </div>
+                <p style="font-size: 20px; font-weight: bold; margin-top: 20px; color: #ffffff;">پروژه انجام شده</p>
+            </div>
+            <div class="stat-item">
+                <div class="circle-container">
+                    <canvas id="circle2" width="180" height="180" class="progress-circle"></canvas>
+                    <div class="stat-number" data-target="170">0</div>
+                </div>
+                <p style="font-size: 20px; font-weight: bold; margin-top: 20px; color: #ffffff;">مشتری راضی</p>
+            </div>
+            <div class="stat-item">
+                <div class="circle-container">
+                    <canvas id="circle3" width="180" height="180" class="progress-circle"></canvas>
+                    <div class="stat-number" data-target="41">0</div>
+                </div>
+                <p style="font-size: 20px; font-weight: bold; margin-top: 20px; color: #ffffff;">سایت فعال</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- نظرات مشتریان -->
+<div class="section animate-on-scroll" id="testimonials-section">
+    <h2>نظرات مشتریان</h2>
+    <div class="grid-3">
+        <div class="card">
+            <p>"همکاری با فراکد تجربه‌ای بی‌نظیر بود. دانش فنی و تعهد حرفه‌ای آن‌ها قابل تحسین است."</p>
+            <h3 style="margin-top: 15px;">سعید زادمهر</h3>
+            <small>مدیر شرکت ابزارمارکت</small>
+        </div>
+        <div class="card">
+            <p>"کیفیت کار و پشتیبانی عالی. حتماً پیشنهاد می‌کنم."</p>
+            <h3 style="margin-top: 15px;">محمدرضا حجتی</h3>
+            <small>مدیر شرکت تکنوسان</small>
+        </div>
+        <div class="card">
+            <p>"تیم فراکد مسیر موفقیت را برای ما هموار کرد. فوق‌العاده حرفه‌ای."</p>
+            <h3 style="margin-top: 15px;">مجید علیخانی</h3>
+            <small>مدیر شرکت جانبی</small>
+        </div>
+    </div>
+</div>
+
+<!-- جمله شعاری -->
+<div style="text-align: center; margin: 10px 0 -50px 0;">
+    <div style="max-width: 650px; margin: 0 auto; background: #f0f7ff; border-radius: 40px; padding: 15px 25px; border-right: 4px solid #0066cc;">
+        <p style="font-size: 17px; font-weight: 500; color: #1a1a2e; margin: 0;">✨ شماره یک بودن، انتخاب ما نیست؛ خواست مشتریان ماست ✨</p>
+    </div>
+</div>
+
+<script>
+    function drawCircle(canvasId, percentage) {
+        const canvas = document.getElementById(canvasId);
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+        const radius = 78;
+        const startAngle = -Math.PI / 2;
+        const endAngle = startAngle + (percentage / 100) * (Math.PI * 2);
+        
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+        ctx.strokeStyle = '#e0e0e0';
+        ctx.lineWidth = 10;
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, startAngle, endAngle);
+        const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+        gradient.addColorStop(0, '#0066cc');
+        gradient.addColorStop(1, '#00a3cc');
+        ctx.strokeStyle = gradient;
+        ctx.lineWidth = 10;
+        ctx.lineCap = 'round';
+        ctx.stroke();
+    }
+    
+    function animateNumber(element, start, end, duration, canvasId, maxValue) {
+        if (start === end) return;
+        let startTime = null;
+        function updateNumber(currentTime) {
+            if (!startTime) startTime = currentTime;
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+            const currentValue = Math.floor(progress * (end - start) + start);
+            element.innerText = currentValue;
+            const percentage = (currentValue / maxValue) * 100;
+            drawCircle(canvasId, Math.min(percentage, 100));
+            if (progress < 1) requestAnimationFrame(updateNumber);
+        }
+        requestAnimationFrame(updateNumber);
+    }
+    
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        return rect.top <= windowHeight - 100;
+    }
+    
+    let animated = false;
+    function initStats() {
+        if (animated) return;
+        const statSection = document.getElementById('stats-section');
+        if (!statSection) return;
+        if (isElementInViewport(statSection)) {
+            animated = true;
+            const counters = document.querySelectorAll('.stat-number');
+            const targets = [67, 170, 41];
+            const canvasIds = ['circle1', 'circle2', 'circle3'];
+            counters.forEach((counter, index) => {
+                const target = targets[index];
+                if (!isNaN(target)) {
+                    drawCircle(canvasIds[index], 0);
+                    animateNumber(counter, 0, target, 2000, canvasIds[index], target);
+                }
+            });
+            window.removeEventListener('scroll', initStats);
+            window.removeEventListener('resize', initStats);
+        }
+    }
+    
+    window.addEventListener('scroll', initStats);
+    window.addEventListener('resize', initStats);
+    setTimeout(initStats, 500);
+</script>
+
+<script>
+    // انیمیشن اسکرول برای بخش‌ها
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        return rect.top <= windowHeight - 100;
+    }
+
+    function checkScrollAnimation() {
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+        animatedElements.forEach(el => {
+            if (isElementInViewport(el) && !el.classList.contains('animated')) {
+                el.classList.add('animated');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkScrollAnimation);
+    window.addEventListener('resize', checkScrollAnimation);
+    setTimeout(checkScrollAnimation, 500);
+</script>
+
+<%- include('partials/footer') %>
