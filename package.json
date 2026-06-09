@@ -1,21 +1,29 @@
 {
   "name": "company-site",
   "version": "1.0.0",
-  "main": "database.js",
+  "description": "",
+  "main": "server.js",
   "dependencies": {
     "bcrypt": "^6.0.0",
     "ejs": "^6.0.1",
-    "express": "^4.18.2",
+    "express": "^4.22.2",
     "express-session": "^1.19.0",
     "sqlite3": "^6.0.1"
   },
   "devDependencies": {},
-"scripts": {
-  "start": "node --max-old-space-size=400 server.js"
-}
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Moradmand1/faracode-site.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "bugs": {
+    "url": "https://github.com/Moradmand1/faracode-site/issues"
+  },
+  "homepage": "https://github.com/Moradmand1/faracode-site#readme"
 }
